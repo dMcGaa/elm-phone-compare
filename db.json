@@ -1,0 +1,10 @@
+{
+  "phones": [
+    { "id": "1", "name": "Nexus 5x", "level": 2 },
+    { "id": "2", "name": "LG G3", "level": 1 },
+    { "id": "3", "name": "OnePlus", "level": 3 },
+    { "id": "4", "name": "Samsung Galaxy S5", "level": 4 },
+    { "id": "5", "name": "LG V30", "level": 1 },
+    { "id": "6", "name": "Samsung Galaxy S9", "level": 1 }
+  ]
+}
