@@ -12,12 +12,17 @@ phonePath : PhoneId -> String
 phonePath id =
   "#phones/" ++ id
 
+comparePath : String
+comparePath =
+  "#compare"
+
 matchers : Parser (Route -> a) a
 matchers = 
   oneOf
     [ map PhonesRoute top
     , map PhoneRoute (s "phones" </> string)
     , map PhonesRoute (s "phones")
+    , map CompareRoute (s "compare")
     ]
 
 parseLocation : Location -> Route

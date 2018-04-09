@@ -5,6 +5,7 @@ import RemoteData exposing (WebData)
 
 type alias Model =
   { phones : WebData (List Phone)
+  , compare : Compare
   , route : Route
   }
 
@@ -12,6 +13,7 @@ type alias Model =
 initialModel : Route -> Model
 initialModel route =
   { phones = RemoteData.Loading
+  , compare = "test"
   , route = route
   }
 
@@ -26,7 +28,11 @@ type alias Phone =
   , level : Int
   }
 
+type alias Compare =
+  String
+
 type Route
   = PhonesRoute
   | PhoneRoute PhoneId
+  | CompareRoute
   | NotFoundRoute

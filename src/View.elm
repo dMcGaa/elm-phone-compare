@@ -5,6 +5,7 @@ import Models exposing (Model, PhoneId)
 import Msgs exposing (Msg)
 import Phones.Edit
 import Phones.List
+import Compare.Compare
 import RemoteData
 
 
@@ -22,6 +23,9 @@ page model =
 
     Models.PhoneRoute id ->
       phoneEditPage model id
+
+    Models.CompareRoute ->
+      Compare.Compare.view model.compare
 
     Models.NotFoundRoute ->
       notFoundView
