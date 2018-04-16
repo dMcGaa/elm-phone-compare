@@ -16,6 +16,10 @@ comparePath : String
 comparePath =
   "#compare"
 
+activePhonePath : String
+activePhonePath =
+  "#activePhone"
+
 matchers : Parser (Route -> a) a
 matchers = 
   oneOf
@@ -23,6 +27,7 @@ matchers =
     , map PhoneRoute (s "phones" </> string)
     , map PhonesRoute (s "phones")
     , map CompareRoute (s "compare")
+    , map ActivePhoneRoute (s "active-phone")
     ]
 
 parseLocation : Location -> Route
