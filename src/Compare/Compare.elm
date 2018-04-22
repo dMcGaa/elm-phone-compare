@@ -2,6 +2,7 @@ module Compare.Compare exposing (..)
 
 --import Msgs exposing (Msg)
 
+import Header exposing (appHeader)
 import Html exposing (..)
 import Models exposing (Phone)
 import RemoteData exposing (WebData)
@@ -12,7 +13,10 @@ import RemoteData exposing (WebData)
 
 view : WebData (List Phone) -> Html msg
 view response =
-    div [] [ maybeList response ]
+    div []
+        [ appHeader
+        , maybeList response
+        ]
 
 
 compareView : List Phone -> Html msg
